@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 import Axios from 'axios'
 import Styles from './styles'
-import InvCard from './invcard'
+import InvCard from './dumb/invcard'
 import { Input, Button } from 'react-native-elements'
 
 export default class ProductsComponent extends React.Component {

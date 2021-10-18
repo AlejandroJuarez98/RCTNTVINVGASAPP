@@ -6,5 +6,5 @@ import { name as appName } from './app.json'
 
 import 'react-native-gesture-handler'
 
-LogBox.ignoreAllLogs();
+LogBox.ignoreAllLogs()
 AppRegistry.registerComponent(appName, () => App)

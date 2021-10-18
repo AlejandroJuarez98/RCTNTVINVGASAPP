@@ -7,7 +7,7 @@ import {
 	ScrollView
 } from 'react-native'
 import Styles from './styles'
-import InvCard from './invcard'
+import InvCard from './dumb/invcard'
 
 export default class InventoryComponent extends React.Component {
 	constructor (props) {

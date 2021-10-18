@@ -6,8 +6,8 @@ import {
 } from 'react-native'
 import Icon from 'react-native-vector-icons/AntDesign'
 import { NavigationContainer } from '@react-navigation/native'
-import InventoryComponent from '../screen/inventory/inventory'
-import ProductsComponent from '../screen/inventory/products'
+import InventoryComponent from '../screen/inventory/smart/inventory'
+import ProductsComponent from '../screen/inventory/smart/products'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 
 const Tab = createMaterialBottomTabNavigator ()

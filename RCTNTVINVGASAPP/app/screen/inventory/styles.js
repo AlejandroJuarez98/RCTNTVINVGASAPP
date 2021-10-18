@@ -84,7 +84,7 @@ export default StyleSheet.create ({
 	},
 	minus: {
 		marginTop: '45%',
-		color: "#ffffff",
+		color: "#222222",
 		fontSize: 20
 	},
 	carditem: {
@@ -111,5 +111,10 @@ export default StyleSheet.create ({
 		fontSize: 15,
 		fontFamily: 'Quicksand-Bold',
 		color: '#bdc3c7'
+	},
+	menuitem: {
+		fontSize: 15,
+		color: '#222222',
+		fontFamily: 'Quicksand-Bold'
 	}
 })

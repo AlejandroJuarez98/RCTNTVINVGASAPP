@@ -6,8 +6,8 @@ import {
 	Text,
 	ScrollView
 } from 'react-native'
-import Styles from './styles'
-import InvCard from './dumb/invcard'
+import Styles from '../styles'
+import InvCard from '../dumb/invcard'
 
 export default class InventoryComponent extends React.Component {
 	constructor (props) {
@@ -23,6 +23,7 @@ export default class InventoryComponent extends React.Component {
 						object[2] = object[2].replace("<h5>", "").replace("</h5>", "")
 
 						return <InvCard 
+								key={ `inv-card-item-${ index }` }
 								index={ index }
 								cbarra={object[0] }
 								name={ object[1] }

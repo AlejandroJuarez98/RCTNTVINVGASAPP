@@ -10,6 +10,7 @@ import {
 } from 'react-native'
 import Axios from 'axios'
 import Styles from './styles'
+import InvCard from './dumb/invcard'
 import InventoryTab from '../../routes/tab'
 import Icon from 'react-native-vector-icons/Entypo'
 import { Input, Button } from 'react-native-elements'

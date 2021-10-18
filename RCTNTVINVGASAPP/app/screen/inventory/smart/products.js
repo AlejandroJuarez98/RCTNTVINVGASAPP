@@ -8,8 +8,8 @@ import {
 	ScrollView
 } from 'react-native'
 import Axios from 'axios'
-import Styles from './styles'
-import InvCard from './dumb/invcard'
+import Styles from '../styles'
+import InvCard from '../dumb/invcard'
 import { Input, Button } from 'react-native-elements'
 
 export default class ProductsComponent extends React.Component {
@@ -88,8 +88,9 @@ export default class ProductsComponent extends React.Component {
 						index={ index }
 						name={ object[1] }
 						cbarra={object[0] }
+						isProductItem={ true }
 						removeItem={ this.removeItem.bind(this) }
-						key={ `inv-card-item-${ index }` }
+						key={ `inv-product-card-item-${ index }` }
 						quantity={ object[2] }	/>
 			})
 		} else {

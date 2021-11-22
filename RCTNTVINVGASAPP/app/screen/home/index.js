@@ -23,18 +23,18 @@ export default class HomeComponent extends React.Component {
 			items: [],
 			station: {},
 			error: false,
-			invnumber: null,
+			invnumber: null
 		}
 	}
 
 	async componentDidMount () {
 		const response = await Axios ({
 			method: 'get',
-			url: `http://192.168.160.52:81/inventario/materializeDesa/php/combustible.php?accion=16`
+			url: `http://192.168.160.52:81/inventario/materialize/php/combustible.php?accion=18`
 		})
 
 		this.state.items = response.data.aaData
-		this.setState({ items: this.state.items })
+		this.setState ({ items: this.state.items })
 	}
 
 	loadData () {
@@ -100,25 +100,25 @@ export default class HomeComponent extends React.Component {
 	        				onValueChange={ this.onChangeSelectedValue.bind(this) }>
 	        				<Picker.Item key={ `station-dialog-item-${ -1 }` } label={ 'Seleccione estación...' } value={ -1 } color={ '#222222' } />
 	        				{
-	        					this.state.items.map((object, index) => {
+	        					this.state.items.map ((object, index) => {
 	        						return <Picker.Item key={ `station-dialog-item-${ index }` } label={ object[0] } value={ `${object[0]} - ${object[1]}` } color={ '#222222' } />
 	        					})
 	        				}
 	        			</Picker>
 						<Input 
-							label='N° de inventario'
 	  						keyboardType='numeric'
+							label='N° de inventario'
+							value={ this.state.invnumber }
 							labelStyle={ Styles.invnumber }
 							inputStyle={ Styles.invnumber }
-							value={ this.state.invnumber }
-							onChangeText={ this.onChangeInputText.bind(this) }
-							placeholder='Número de inventario' />
+							placeholder='Número de inventario'
+							onChangeText={ this.onChangeInputText.bind(this) } />
 						<View style={ Styles.invbutton }>
 							<Button 
+								type='outline'
 								onPress={ this.loadData.bind(this) }
 								titleStyle={ Styles.btntload }
 								buttonStyle={ Styles.btnload }
-								type='outline'
 								title='Cargar información' />
 						</View>
 						{ this.handleError() }

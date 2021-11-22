@@ -16,7 +16,6 @@ import {
 
 const options = (props) => {
   	const [ visible, setVisible ] = useState (true)
- 	
   	const hideMenu = () => setVisible (false)
   	const showMenu = () => setVisible (true)
 

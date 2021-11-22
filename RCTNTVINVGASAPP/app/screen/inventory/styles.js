@@ -103,7 +103,7 @@ export default StyleSheet.create ({
 		textAlign: 'center',
 		alignItems: 'center',
 		justifyContent: 'center',
-		marginTop: '40%'
+		marginVertical: '25%'
 	},
 	emptyLabel: {
 		marginTop: 15,

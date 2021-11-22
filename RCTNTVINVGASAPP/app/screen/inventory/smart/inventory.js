@@ -17,11 +17,9 @@ export default class InventoryComponent extends React.Component {
 	render () {
 		return (
 			<ScrollView style={ Styles.container }>
-				<Text style={ Styles.reportlabel }>Reporte de inventario</Text>
+				<Text style={ Styles.reportlabel }>Reporte de inventario ({ this.props.route.params.detail.length })</Text>
 				{
 					this.props.route.params.detail.map ((object, index) => {
-						object[2] = object[2].replace("<h5>", "").replace("</h5>", "")
-
 						return <InvCard 
 								key={ `inv-card-item-${ index }` }
 								index={ index }

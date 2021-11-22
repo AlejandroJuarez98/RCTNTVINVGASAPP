@@ -22,7 +22,7 @@ const InventoryTab = (props) => {
 			<Tab.Screen
 				name="Productos"
 				component={ ProductsComponent } 
-				initialParams={{ detail: props.screenProps.detail, invnumber: props.screenProps.invnumber }}
+				initialParams={{ detail: props.screenProps.detail, invnumber: props.screenProps.invnumber, ip: props.screenProps.ip }}
 				options={{
 					tabBarIcon: ({ color, size }) => (
 			            <Icon name="check" color={color} size={size} />
